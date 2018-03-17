@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render ExpenseListItem with expense 1`] = `
+<div>
+  <h3>
+    Gum
+  </h3>
+  <p>
+    1.95
+     - 
+    1st Jan 1970
+  </p>
+  <button
+    onClick={[Function]}
+  >
+    Remove
+  </button>
+  <Link
+    replace={false}
+    to="edit/1"
+  >
+    Edit
+  </Link>
+</div>
+`;
+
+exports[`should render ExpenseListItem with out expense 1`] = `
+<div>
+  <h3 />
+  <p>
+     - 
+    1st Jan 1970
+  </p>
+  <button
+    onClick={[Function]}
+  >
+    Remove
+  </button>
+  <Link
+    replace={false}
+    to="edit/undefined"
+  >
+    Edit
+  </Link>
+</div>
+`;
