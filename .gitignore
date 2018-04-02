@@ -3,3 +3,5 @@ coverage
 public/dist
 public/styles
 /.vscode/
+.env.test
+.env.development

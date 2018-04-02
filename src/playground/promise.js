@@ -1,9 +1,9 @@
-// const promise = new Promise((resolve, reject) => {
-// 	setTimeout(() => {
-// 		resolve('this is my resolved data');
-// 	}, 5000);
-// });
+const promise = new Promise((resolve, reject) => {
+	setTimeout(() => {
+		resolve('this is my resolved data');
+	}, 5000);
+});
 
-// promise.then((data) => {
-// 	console.log(data);
-// });
+promise.then((data) => {
+	console.log(data);
+});
