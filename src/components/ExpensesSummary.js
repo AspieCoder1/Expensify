@@ -6,7 +6,6 @@ import selectExpensesTotal from '../selectors/expenses-total';
 
 export const ExpensesSummary = ({ expenseCount, expensesTotal }) => {
   const expenseWord = expenseCount === 1 ? 'expense' : 'expenses' ;
-  console.log('total:',expensesTotal);
   const formattedExpensesTotal = numeral(expensesTotal).format('$0,0.00');
   
   return (
