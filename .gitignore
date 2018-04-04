@@ -1,7 +1,4 @@
-node_modules
-coverage
-public/dist
-public/styles
-/.vscode/
+node_modules/
+public/dist/
 .env.test
 .env.development

@@ -15,10 +15,6 @@ button:disabled {
   cursor: default;
 }
 
-input:focus, button:focus {
-  outline: none;
-}
-
 .is-active {
   font-weight: bold;
 }

@@ -1,48 +1,49 @@
-import { setStartDate, setEndDate, setTextFilter, sortByDate, sortByAmount} from '../../actions/filters';
 import moment from 'moment';
+import {
+  setStartDate,
+  setEndDate,
+  setTextFilter,
+  sortByAmount,
+  sortByDate
+} from '../../actions/filters';
 
-test('should generate a set start date action object', () => {
-	const result = setStartDate(moment(0));
-	expect(result).toEqual({
-		type: 'SET_START_DATE',
-		startDate: moment(0)
-	});
+test('should generate set start date action object', () => {
+  const action = setStartDate(moment(0));
+  expect(action).toEqual({
+    type: 'SET_START_DATE',
+    startDate: moment(0)
+  });
 });
 
-test('should generate a set end date action object', () => {
-	const result = setEndDate(moment(0));
-	expect(result).toEqual({
-		type: 'SET_END_DATE',
-		endDate: moment(0)
-	});
+test('should generate set end date aciton object', () => {
+  const action = setEndDate(moment(0));
+  expect(action).toEqual({
+    type: 'SET_END_DATE',
+    endDate: moment(0)
+  });
 });
 
-test('should generate a sort by date action object', () => {
-	const result = sortByDate();
-	expect(result).toEqual({
-		type: 'SORT_BY_DATE',
-	});
+test('should generate set text filter object with text value', () => {
+  const text = 'Something in';
+  const action = setTextFilter(text);
+  expect(action).toEqual({
+    type: 'SET_TEXT_FILTER',
+    text
+  });
 });
 
-test('should generate a sort by amount action object', () => {
-	const result = sortByAmount();
-	expect(result).toEqual({
-		type: 'SORT_BY_AMOUNT',
-	});
+test('should generate set text filter object with default', () => {
+  const action = setTextFilter();
+  expect(action).toEqual({
+    type: 'SET_TEXT_FILTER',
+    text: ''
+  });
 });
 
-test('should set text filter', () => {
-	const result = setTextFilter('James');
-	expect(result).toEqual({
-		type: 'SET_TEXT_FILTER',
-		text: 'James'
-	});
+test('should generate action object for sort by date', () => {
+  expect(sortByDate()).toEqual({ type: 'SORT_BY_DATE' });
 });
 
-test('it should set default text filter if none is passed in', () => {
-	const result = setTextFilter();
-	expect(result).toEqual({
-		type: 'SET_TEXT_FILTER',
-		text: ''
-	});
+test('should generate action object for sort by amount', () => {
+  expect(sortByAmount()).toEqual({ type: 'SORT_BY_AMOUNT' });
 });
